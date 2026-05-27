@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gruppo Lamezia Terme 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+
+  <div class="color-band">
+    <div class="topbar-logo-wrap">
+      <img src="foto/Logo.png" alt="Lamezia Terme 2" style="height: 50px;">
+    </div>
+  <div class="app">
+    <aside class="side-decor"></aside>
+
+    <main class="main">
+      <div class="breadcrumb">
+        <span class="bc-ico">⛺</span>
+        <span>Unità</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Anagrafiche delle Unità</span>
+      </div>
+      <div class="content-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <span class="icon">🗺</span>
+            <span>Gerarchia Territoriale</span>
+          </div>
+          <div class="panel-body">
+            <div class="tree" id="tree"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="tabs">
+            <div class="tab active" data-tab="soci">Soci</div>
+          </div>
+
+          <div class="search-row">
+            <div class="search-input"><input type="text" id="search" placeholder="Cerca per nome, cognome, ruolo...">
+            </div>
+            <select id="filter-anno">
+              <option value="">Tutti gli anni</option>
+            </select>
+            <select id="filter-classe">
+              <option value="">Tutte le classi</option>
+            </select>
+            <span class="count-pill" id="count-pill">0 SOCI</span>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead id="thead"></thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="footer-text">
+          2026 © AGESCI - Lamezia Terme2.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h3 id="m-name"></h3>
+          <div class="sub" id="m-sub"></div>
+        </div>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-tabs">
+        <div class="modal-tab active" data-mtab="anagrafica">Anagrafica Soci</div>
+        <div class="modal-tab" data-mtab="progressione">Scheda Progressione Personale</div>
+      </div>
+      <div class="modal-body" id="m-body"></div>
+    </div>
+  </div>
+
+  <script src="animations.js" defer></script>
+</body>
+
+</html>
