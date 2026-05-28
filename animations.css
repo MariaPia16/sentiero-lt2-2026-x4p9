@@ -855,9 +855,10 @@
     }
 
     .modal-body {
-      padding: 24px 28px;
+      padding: 24px 28px 40px;
       max-height: 70vh;
-      overflow-y: auto
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .form-grid {
@@ -965,6 +966,18 @@
         grid-template-columns: 1fr
       }
 
+      .modal-tabs {
+        flex-wrap: nowrap;     /* obbligo di stare in fila */
+        padding: 6px 12px 0;
+      }
+      .modal-tab {
+        flex: 1;               /* dividono lo spazio in parti uguali */
+        text-align: center;
+        padding: 12px 6px;
+        font-size: 11.5px;
+        white-space: normal;   /* permette di andare a capo internamente se serve */
+      }
+
       .form-field.fw-2 {
         grid-column: span 1
       }
@@ -1020,7 +1033,10 @@
       /* Modale che occupa tutto su mobile */
       .modal-bg { padding: 0; }
       .modal { border-radius: 0; max-height: 100vh; }
-      .modal-body { max-height: calc(100vh - 130px); padding: 16px; }
+      .modal-body {
+        max-height: calc(100vh - 130px);
+        padding: 16px 16px calc(70px + env(safe-area-inset-bottom, 0px));
+      }
       .form-grid { grid-template-columns: 1fr !important; gap: 12px; }
       .anno-block-head { padding: 12px 14px; }
       .anno-block-body { padding: 14px; }
@@ -1835,30 +1851,47 @@
     }
 
     .collap-head {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      user-select: none;
-      padding: 6px 0;
-    }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  padding: 11px 14px;
+  background: linear-gradient(180deg, rgba(92,49,134,0.05), rgba(92,49,134,0.10));
+  border: 1px solid rgba(92, 49, 134, 0.22);
+  border-radius: 6px;
+  transition: all .15s;
+}
 
-    .collap-head .collap-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--purple);
-      letter-spacing: .2px;
-      border-bottom: 2px solid var(--yellow);
-      padding-bottom: 4px;
-    }
+.collap-head:hover {
+  background: linear-gradient(180deg, rgba(92,49,134,0.10), rgba(92,49,134,0.18));
+  border-color: rgba(92, 49, 134, 0.42);
+  box-shadow: 0 2px 6px rgba(92, 49, 134, 0.08);
+}
 
-    .collap-head .collap-arrow {
-      display: inline-block;
-      color: var(--purple);
-      font-size: 11px;
-      transition: transform .2s ease;
-      line-height: 1;
-    }
+.collap-section.open .collap-head {
+  background: linear-gradient(180deg, rgba(92,49,134,0.14), rgba(92,49,134,0.22));
+  border-color: rgba(92, 49, 134, 0.45);
+}
+
+.collap-head .collap-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple);
+  letter-spacing: .2px;
+  border-bottom: none;   /* tolgo la lineetta gialla, non serve più con il box */
+  padding-bottom: 0;
+}
+
+.collap-head .collap-arrow {
+  margin-left: auto;
+  color: var(--purple);
+  font-size: 14px;
+  transition: transform .2s ease;
+  line-height: 1;
+  opacity: .85;
+}
 
     .collap-section.open .collap-arrow {
       transform: rotate(90deg)
