@@ -3884,13 +3884,10 @@ const LUPETTI_DATA = {
       const cogNom = (cog + ' ' + nom).trim();
 
       const baseNames = [];
-      if (cs)            baseNames.push(cs);
-      if (cog && nom) baseNames.push(
-        `${nom.charAt(0).toUpperCase() + nom.slice(1).toLowerCase()}_${cog.charAt(0).toUpperCase() + cog.slice(1).toLowerCase()}`,
-        `${nom.charAt(0).toUpperCase() + nom.slice(1).toLowerCase()} ${cog.charAt(0).toUpperCase() + cog.slice(1).toLowerCase()}`
-      );
-      if (cog) baseNames.push(cog.charAt(0).toUpperCase() + cog.slice(1).toLowerCase());
       if (nom) baseNames.push(nom.charAt(0).toUpperCase() + nom.slice(1).toLowerCase());
+      if (cog && nom) baseNames.push(
+        `${nom.charAt(0).toUpperCase() + nom.slice(1).toLowerCase()}_${cog.charAt(0).toUpperCase() + cog.slice(1).toLowerCase()}`
+      );
 
       // Per ogni base provo .jpg, .jpeg, .png (con minuscola e maiuscola estensione)
       const exts = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'];
