@@ -50,7 +50,7 @@ const LUPETTI_DATA = {
         "piccoleOrme": []
       },
       "BARBANTI|PAOLO": {
-        "desc": "Paolo ha iniziato il suo percorso fin da piccolo e frequenta l’ambiente scout da sempre. Prima ancora dell’ingresso in branca partecipava già ad alcuni momenti del gruppo, accompagnando la mamma, aiuto capo in L/C, e questo gli ha permesso di crescere all’interno di questo contesto fin da subito. E' molto vivace e sente costantemente il bisogno di muoversi e spesso fatica a stare fermo, soprattutto insieme a Emanuele, con cui ha instaurato un bel rapporto di amicizia. Se coinvolto nelle attività, in particolare in quelle manuali o nei contesti di responsabilità, riesce a dare il meglio di sé e a mettersi in gioco con impegno. Durante quest’anno ne ha dato prova in diverse occasioni: nella preparazione di Assisi, ad esempio, quando con il CDA si è dedicato alla preparazione della marmellata, ma anche durante la caccia stessa, mostrando partecipazione, impegno e senso di responsabilità. Paolo ha bisogno di essere spronato e seguito per partecipare alle attività ma anche per affrontare con maggiore sicurezza le nuove esperienze, così da favorire un coinvolgimento più attivo nel gruppo. Sente inoltre la nostalgia di casa e durante i pernotti può avere momenti di pianto; in queste situazioni, il contatto telefonico con la mamma o la vicinanza della sorella lo aiutano a tranquillizzarsi e a ritrovare serenità.",
+        "desc": "Paolo frequenta l'ambiente scout fin da piccolo e prima ancora del suo ingresso in branca partecipava già ad alcuni momenti del gruppo, accompagnando la mamma che era Capo in L/C. È molto vivace, con un forte bisogno di movimento, e fatica spesso a stare fermo, soprattutto quando è insieme a Emanuele, con cui ha costruito una bella amicizia. Quando viene coinvolto, in particolare in attività manuali o di responsabilità, partecipa con entusiasmo e sa mettersi in gioco con impegno, come ha dimostrato durante la preparazione delle marmellate per Assisi e nel corso della caccia stessa. Ha bisogno di essere incoraggiato e accompagnato per vivere con più sicurezza nuove esperienze e partecipare più attivamente alla vita di gruppo. Durante i pernotti può manifestare nostalgia di casa, ma il contatto telefonico con la mamma o la vicinanza della sorella lo aiutano a rasserenarsi.",
         "cog": "BARBANTI",
         "nom": "PAOLO",
         "classe": "5 elementare",
@@ -3318,14 +3318,26 @@ const LUPETTI_DATA = {
 
     function populateClasseFilter() {
       const sel = document.getElementById('filter-classe');
-      if (currentUnit === 'comunita_capi') { sel.style.display = 'none'; sel.value = ''; return; }
       sel.style.display = '';
       const prev = sel.value;
-      const classi = [...new Set(
-        SOCI.filter(s => s.BrancaKey === currentUnit).map(s => (s.Classe || '').trim()).filter(Boolean)
-      )].sort((a, b) => classeOrder(a) - classeOrder(b));
-      sel.innerHTML = '<option value="">Tutte le classi</option>' + classi.map(c => `<option value="${c}">${c}</option>`).join('');
-      if (classi.includes(prev)) sel.value = prev;
+
+      if (currentUnit === 'comunita_capi') {
+        // Per Co.Ca filtro per Livello FoCa
+        const liv = [...new Set(
+          SOCI.filter(s => s.BrancaKey === currentUnit)
+              .map(s => (s.LivelloFoCa || '').trim())
+              .filter(v => v && v !== 'NULLA')
+        )].sort();
+        sel.innerHTML = '<option value="">Tutti i livelli FoCa</option>' + liv.map(c => `<option value="${c}">${c}</option>`).join('');
+        if (liv.includes(prev)) sel.value = prev;
+      } else {
+        // Per lupetti, reparto, clan filtro per Classe
+        const classi = [...new Set(
+          SOCI.filter(s => s.BrancaKey === currentUnit).map(s => (s.Classe || '').trim()).filter(Boolean)
+        )].sort((a, b) => classeOrder(a) - classeOrder(b));
+        sel.innerHTML = '<option value="">Tutte le classi</option>' + classi.map(c => `<option value="${c}">${c}</option>`).join('');
+        if (classi.includes(prev)) sel.value = prev;
+      }
     }
 
     function renderTable() {
@@ -3342,7 +3354,10 @@ const LUPETTI_DATA = {
       list = sortByCognome(list);
       list = list.filter(s => {
         if (fa) { const y = (s.DataNascita || '').split('/').pop(); if (y !== fa) return false; }
-        if (fc && (s.Classe || '').trim() !== fc) return false;
+        if (fc) {
+          const campo = currentUnit === 'comunita_capi' ? (s.LivelloFoCa || '').trim() : (s.Classe || '').trim();
+          if (campo !== fc) return false;
+        }
         if (q) {
           const blob = ((s.Nome || '') + ' ' + (s.Cognome || '') + ' ' + (s.Email || '') + ' ' + (s.Ruolo || '') + ' ' + (s['Squadriglia'] || '')).toLowerCase();
           if (!blob.includes(q)) return false;
@@ -3754,8 +3769,10 @@ const LUPETTI_DATA = {
           const sign = rounded > 0 ? '+' : '';
           const color = rounded > 0 ? '#27ae60' : rounded < 0 ? '#c0392b' : '#7a8298';
           const arrow = rounded > 0 ? '▲' : rounded < 0 ? '▼' : '◆';
-          variaHtml = `<span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:${color};margin-left:6px">${arrow} ${sign}${rounded.toFixed(1)}%</span>
-        <span style="font-size:11px;color:#9aa3b8;font-weight:500">vs anno precedente</span>`;
+          variaHtml = `<div style="display:inline-flex;flex-direction:column;align-items:flex-start;margin-left:6px;line-height:1.15">
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:${color}">${arrow} ${sign}${rounded.toFixed(1)}%</span>
+          <span style="font-size:10px;color:#9aa3b8;font-weight:500;margin-top:2px">vs anno precedente</span>
+        </div>`;
         }
       }
 
