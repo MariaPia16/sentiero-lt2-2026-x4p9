@@ -3977,24 +3977,6 @@ const LUPETTI_DATA = {
       const cogWords = cog.split(/\s+/).filter(Boolean);
       if (cogWords.length > 1) cogWords.forEach(w => expandForms(w).forEach(f => cogForms.push(f)));
 
-      const baseSet = new Set();
-      const addBase = v => v && v.trim() && baseSet.add(v.trim());
-
-      if (cs) addBase(cs);
-      cogForms.forEach(addBase);
-      nomForms.forEach(addBase);
-      cogForms.forEach(c => nomForms.forEach(n => {
-        addBase(`${c}_${n}`); addBase(`${c} ${n}`); addBase(`${c}${n}`);
-        addBase(`${n}_${c}`); addBase(`${n} ${c}`); addBase(`${n}${c}`);
-      }));
-
-      const exts = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.JPE', '.PNG'];
-      const candidates = [];
-      baseSet.forEach(b => exts.forEach(e => candidates.push(`foto/${b}${e}`)));
-
-      // Foto: lookup veloce nella FOTO_MAP, default {CodiceSocio}.jpg
-      const cs = (s.CodiceSocio || '').toString().replace(/['"<>]/g, '');
-      const cogNom = ((s.Cognome || '') + ' ' + (s.Nome || '')).trim();
       const customFile = FOTO_MAP[cs];
       const fotoSrc = customFile ? `foto/${customFile}` : (cs ? `foto/${cs}.jpg` : '');
       const fotoImg = fotoSrc ? `
