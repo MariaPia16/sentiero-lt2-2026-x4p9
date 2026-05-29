@@ -3907,7 +3907,6 @@ const LUPETTI_DATA = {
       const titleCase = (x) => x.toLowerCase().split(/\s+/)
         .map(w => w ? w.charAt(0).toUpperCase() + w.slice(1) : '').join(' ');
 
-      // Genera tutte le varianti utili di una stringa
       function expandForms(x) {
         if (!x) return [];
         const set = new Set();
@@ -3924,11 +3923,14 @@ const LUPETTI_DATA = {
         if (ac !== x) {
           add(ac); add(ac.toLowerCase()); add(titleCase(ac));
         }
-        // Aggiungo versione concatenata (senza spazi) di ognuna
+        // Per ogni variante: spazio, concatenata, e underscore-tra-parole
         const out = new Set();
         set.forEach(v => {
           out.add(v);
-          if (v.includes(' ')) out.add(v.replace(/\s+/g, ''));
+          if (v.includes(' ')) {
+            out.add(v.replace(/\s+/g, ''));   // FrancescaPia (concat)
+            out.add(v.replace(/\s+/g, '_'));  // Francesca_Pia (underscore tra parole)
+          }
         });
         return [...out];
       }
@@ -3941,7 +3943,7 @@ const LUPETTI_DATA = {
       // Aggiungo anche i SINGOLI cognomi (es. "CAPARROTTA" da "MERANTE CAPARROTTA")
       const cogWords = cog.split(/\s+/).filter(Boolean);
       if (cogWords.length > 1) cogWords.forEach(w => expandForms(w).forEach(f => cogForms.push(f)));
-      
+
       const baseSet = new Set();
       const addBase = v => v && v.trim() && baseSet.add(v.trim());
 
