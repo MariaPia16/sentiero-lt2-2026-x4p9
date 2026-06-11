@@ -4,19 +4,26 @@ const LUPETTI_DATA = {
         "cog": "AMATO",
         "nom": "FRANCESCA PIA",
         "classe": "4 elementare",
-        "presenza": "65,22%",
+        "presenza": "66,67%",
         "vdbInv": "Si sente partecipe e protagonista. Come impegno a breve vuole conquistare le specialità.",
         "obiettivo": "Aprirsi di più con gli altri ed aiutare i più piccoli",
         "prede": "Fare amicizia/Realizzare qualcosa per l'angolo e per la sestiglia - Akela/Mor",
         "momento": "II momento",
         "specialita": [
           {
-            "nome": "cuoco",
-            "prova": "Prepare un salato per il branco (pasta sfoglia) / Portare una ricetta del riso pieno e spiegare la preparazione - Wontolla"
+            "nome": "Cuoco",
+            "prove": [
+              { "testo": "Prepare un salato per il branco (pasta sfoglia)", "completata": true, "data": "2026-05-16"},
+              { "testo": "Portare una ricetta del riso pieno e spiegare la preparazione", "completata": true, "data":"2026-05-23"},
+              { "testo": "Portare una ricetta delle melanzane piene e spiegare la preparazione", "completata": true, "data":"2026-06-01" }
+            ],
+            "assegnataDa": "Wontolla"
           },
           {
-            "nome": "giocattolaio",
-            "prova": "?"
+            "nome": "Giocattolaio",
+            "prove": [
+              { "testo": "?", "completata": false }
+            ]
           }
         ],
         "tagliaMaglia": "M",
@@ -29,19 +36,27 @@ const LUPETTI_DATA = {
         "cog": "BAGLIONE",
         "nom": "LILLA CAROLINA",
         "classe": "3 elementare",
-        "presenza": "78,26%",
+        "presenza": "79,17%",
         "vdbInv": "E' rimasta stupita dalla memoria di Maria. Ha avuto po' di nostalgia. Come impegno a breve vuole venire alle riunioni tutti i sabati e fare la promessa (gesto interrotto).",
         "obiettivo": "Scoprire come può applicare legge, promessa e motto in tana e fuori.",
         "prede": "Prendersi cura degli altri (dolce) / Imparare la preghiera a San Francesco",
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "disegnatore",
-            "prova": "Conoscere le varie tecniche di disegno e sapere quale materiale usare per realizzare ogni specifica tecnica/ Fare un disegno con una tecnica a scelta e spiegare la tecnica utilizzata. - Bagheera"
+            "nome": "Disegnatore",
+            "prove": [
+              { "testo": "Conoscere le varie tecniche di disegno e sapere quale materiale usare per realizzare ogni specifica tecnica", "completata": false },
+              { "testo": "Fare un disegno con una tecnica a scelta e spiegare la tecnica utilizzata (tempere).", "completata": true, "data": "2026-06-01"}
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "fotografo",
-            "prova": "Imparare ad usare la macchina fotografica e a conoscere le varie componenti (cartellone)/ Scattare una serie di foto e presentarle al branco. - Bagheera"
+            "nome": "Fotografo",
+            "prove": [
+              { "testo": "Imparare ad usare la macchina fotografica e a conoscere le varie componenti (cartellone)", "completata": false },
+              { "testo": "Scattare una serie di foto e presentarle al branco.", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -54,15 +69,18 @@ const LUPETTI_DATA = {
         "cog": "BARBANTI",
         "nom": "PAOLO",
         "classe": "5 elementare",
-        "presenza": "69,57%",
+        "presenza": "66,67%",
         "vdbInv": "Gli è piaciuta la colazione in pigiama, la tombola, l'avvistamento, la caccia a Bagheera. Come impegno a breve vuole prendere le specialità, comportarsi meglio durante le riunioni ed aprirsi di più agli altri.",
         "obiettivo": "Serietà durante le riunioni, aprirsi di più agli altri",
         "prede": "Comportarsi bene durante le riunioni (non dare fastidio e non dire parolacce) - Mor",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "",
-            "prova": ""
+            "nome": "Cuoco",
+            "prove": [
+              { "testo": "?", "completata": false },
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -82,15 +100,20 @@ const LUPETTI_DATA = {
         "cog": "BUFFONE",
         "nom": "PEPPINO",
         "classe": "3 elementare",
-        "presenza": "43,48%",
+        "presenza": "41,67%",
         "vdbInv": "Assente",
         "obiettivo": "Fare amicizia con gli altri",
         "prede": "Essere più presente alle riunioni e alle uscite/ Imparare la preghiera/ Allacciarsi le scarpe - Io",
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "amico degli animali",
-            "prova": "Parlare del suo animale domestico/ Fare un cartellone sugli animali in via d'estinzione/ Quali sono gli animali della nostra regione - Kaa"
+            "nome": "Amico degli animali",
+            "prove": [
+              { "testo": "Parlare del suo animale domestico", "completata": false },
+              { "testo": "Fare un cartellone sugli animali in via d'estinzione", "completata": false },
+              { "testo": "Quali sono gli animali della nostra regione", "completata": false }
+            ],
+            "assegnataDa": "Kaa"
           }
         ],
         "tagliaMaglia": "",
@@ -103,17 +126,12 @@ const LUPETTI_DATA = {
         "cog": "CAPARROTTA",
         "nom": "ANNA MERANTE",
         "classe": "3 elementare",
-        "presenza": "60,87%",
+        "presenza": "62,50%",
         "vdbInv": "Mi è piaciuto stare tanto con tutti, giocare a tombola, piramide umana. Vorrei aiutare gli altri, conoscerli meglio e rispettare la legge, imparare la promessa e rispettarla.",
         "obiettivo": "Essere meno emotiva ed essere più ordinata",
         "prede": "Conoscere meglio i sestiglieri/ Preghiera San F - Mor",
         "momento": "Primo momento",
-        "specialita": [
-          {
-            "nome": "",
-            "prova": ""
-          }
-        ],
+        "specialita": [],
         "tagliaMaglia": "",
         "vdbEst": "",
         "assisi": "No",
@@ -124,15 +142,20 @@ const LUPETTI_DATA = {
         "cog": "CAPUTI",
         "nom": "MARIA",
         "classe": "3 elementare",
-        "presenza": "86,96%",
+        "presenza": "83,33%",
         "vdbInv": "(Orgogliona). E' stato bellissimo, soprattutto i giochi. Come impegno a breve vuole essere meno disordinata, allacciarsi le scarpe da sola e fare la promessa.",
         "obiettivo": "Allacciarsi le scarpe, tenere ordinare le sue cose",
         "prede": "Scarpe/ Essere più ordinata - Mor",
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "canterina",
-            "prova": "Imparare la sua canzone preferita/ Imparare le note musicali/ Proporre un canto scout al branco - Kaa"
+            "nome": "Canterina",
+            "prove": [
+              { "testo": "Imparare la sua canzone preferita", "completata": false },
+              { "testo": "Imparare le note musicali", "completata": false },
+              { "testo": "Proporre un canto scout al branco", "completata": false }
+            ],
+            "assegnataDa": "Kaa"
           }
         ],
         "tagliaMaglia": "",
@@ -145,15 +168,19 @@ const LUPETTI_DATA = {
         "cog": "CURTO",
         "nom": "EMANUELE",
         "classe": "5 elementare",
-        "presenza": "60,87%",
+        "presenza": "62,50%",
         "vdbInv": "Gli è piaciuta la tombola, l'avvistamento. Vuole impegnarsi per conquistare le specialità e venire al campo estivo.",
         "obiettivo": "Partecipare di più ai campi, serietà durante le riunioni ed aprirsi di più agli altri",
         "prede": "Comportarsi bene durante le riunioni (no calci, ecc) - Mor",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "",
-            "prova": ""
+            "nome": "Fografo",
+            "prove": [
+              { "testo": "Imparare ad usare la macchina fotografica e a conoscere le varie componenti", "completata": true, "data":"2026-06-01" },
+              { "testo": "Scattare una serie di foto e presentarle al branco.", "completata": true, "data":"2026-06-01" }
+            ],
+            "assegnataDa": "?"
           }
         ],
         "tagliaMaglia": "",
@@ -166,19 +193,26 @@ const LUPETTI_DATA = {
         "cog": "D'ALESSI",
         "nom": "MARTA",
         "classe": "5 elementare",
-        "presenza": "86,96%",
+        "presenza": "87,50%",
         "vdbInv": "Penso sia bellissimo fare il porta totem perché ti fa sentire importante. Chi porta il totem si impegna a tenere il passo di quelli più deboli. È un po' permalosa. Vorrebbe il dormitorio dei maschi e delle femmine più vicini. Mi sono piaciute le storie di Bagheera, l'amicizia con Mario Luca e la compagnia.",
         "obiettivo": "Essere meno permalosa e competitiva. Dare più spazio agli altri",
         "prede": "Accettare le sconfitte durante i giochi / Tenere unita la sestiglia e coinvolgere tutti durante le attività/ Realizzare qualcosa di manuale per la sestiglia - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "atleta",
-            "prova": "Preparare e proporre un gioco di movimento tramite un percorso (staffetta, palla,ecc.) - Bagheera"
+            "nome": "Atleta",
+            "prove": [
+              { "testo": "Preparare e proporre un gioco di movimento tramite un percorso (staffetta, palla,ecc.)", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "canterina",
-            "prova": "Conoscere le note musicali/ Insegnare al Branco/Cerchio almeno 2 canti nuovi - Bagheera"
+            "nome": "Canterina",
+            "prove": [
+              { "testo": "Conoscere le note musicali", "completata": false },
+              { "testo": "Insegnare al Branco/Cerchio almeno 2 canti nuovi", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -191,15 +225,19 @@ const LUPETTI_DATA = {
         "cog": "D'ELIA",
         "nom": "MARCO",
         "classe": "5 elementare",
-        "presenza": "78,26%",
+        "presenza": "75%",
         "vdbInv": "Mi è piaciuto l'avvistamento. Come impegno a breve voglio cercare di aiutare tutti. Impegnarsi ad essere meno sciocchi (chiesto da Akela).",
         "obiettivo": "Essere meno permaloso e meno infantile essere più partecipe alle attività",
         "prede": "Mantenere il silenzio ed aiutare i VL a mantenerlo - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "musicista",
-            "prova": "Spiegare le note e come si suona la chitarra/ Suonare una canzone al branco - Bagheera"
+            "nome": "Musicista",
+            "prove": [
+              { "testo": "Spiegare le note e come si suona la chitarra", "completata": false },
+              { "testo": "Suonare una canzone al branco", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -219,19 +257,29 @@ const LUPETTI_DATA = {
         "cog": "DAVOLI",
         "nom": "CECILIA",
         "classe": "5 elementare",
-        "presenza": "73,91%",
+        "presenza": "70,83%",
         "vdbInv": "Bellissimo. Era difficile stare lontano dai genitori. Il primo ringraziamento a Vanessa e il secondo a voi VL che ci fate crescere. Mi sono piaciuti i canti e i momenti di preghiera. L'unica cosa i pasti troppo tardi e come impegno voglio fare la promessa.",
         "obiettivo": "Aprirsi di più agli altri, avere più pazienza, mettersi di più in gioco ed avere meno paura",
         "prede": "Conoscere meglio i sestiglieri/ Diario della gratitudine (scrivere due cose positiva che ti accadono ogni giorno)/ Aiutare i più piccoli - Io/Mor",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "cuoco",
-            "prova": "Conoscere le regole di una buona alimentazione e conoscere i problemi causati da una cattiva alimentazione/ Conoscere le principali norme igieniche che devono essere rispettate quando si cucina/ Prendere una ricetta dalla nonna e presentarla al Branco - Bagheera "
+            "nome": "Cuoco",
+            "prove": [
+              { "testo": "Conoscere le regole di una buona alimentazione e conoscere i problemi causati da una cattiva alimentazione", "completata": false },
+              { "testo": "Conoscere le principali norme igieniche che devono essere rispettate quando si cucina", "completata": false },
+              { "testo": "Prendere una ricetta dalla nonna e presentarla al Branco", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "attrice",
-            "prova": "Conoscere le basi delle tecniche espressive principali (recitazione, mimo, canto, ombre cinesi,ecc)/ Conoscere alcune regole per recitare bene/Costruire una piccola scenetta da presentare al Branco - Bagheera"
+            "nome": "Attrice",
+            "prove": [
+              { "testo": "Conoscere le basi delle tecniche espressive principali (recitazione, mimo, canto, ombre cinesi,ecc)", "completata": false },
+              { "testo": "Conoscere alcune regole per recitare bene", "completata": false },
+              { "testo": "Costruire una piccola scenetta da presentare al Branco", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -244,15 +292,19 @@ const LUPETTI_DATA = {
         "cog": "DE SANTIS",
         "nom": "MATTIA",
         "classe": "5 elementare",
-        "presenza": "78,26%",
+        "presenza": "79,17%",
         "vdbInv": "Mi sono piaciute le attività che sono state belle in compagnia. Come impegno vorrei aiutare sia i piccoli che i grandi perché così ci aiutiamo a vicenda ed inoltre vorrei impegnarmi per passare nel reparto. Mario si alzava e faceva cose strane, è simpatico.",
         "obiettivo": "Aiutare i grandi e i piccoli",
         "prede": "Scegliere una persona ogni sabato e sostenerla durante le attività (Alessandro, Francesca A, ecc) - Bagheera",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "giocatore di squadra",
-            "prova": "Insieme a Francesca realizzare più giochi di squadra e presentarli al branco (un torneo)/ Fare un piccolo quaderno dei giochi di squadra a disposizione del Branco/Cerchio. - Bagheera"
+            "nome": "Giocatore di squadra",
+            "prove": [
+              { "testo": "Insieme a Francesca realizzare più giochi di squadra e presentarli al branco (un torneo)", "completata": false },
+              { "testo": "Fare un piccolo quaderno dei giochi di squadra a disposizione del Branco/Cerchio.", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -271,15 +323,19 @@ const LUPETTI_DATA = {
         "desc": "Anna è una bambina timida e non ha costruito molte amicizie all’interno del gruppo; nonostante ciò ha un buon legame con Beatrice, con cui ha stretto un rapporto significativo nel branco. Ha svolto tutto il percorso nel branco, ma ha sempre partecipato in modo piuttosto discontinuo sia alle riunioni che alle uscite e ai campeggi. Nell’ultimo anno la sua presenza è stata più assidua rispetto all’anno precedente, anche se complessivamente la frequenza è circa il 40%.",
         "nom": "ANNA",
         "classe": "5 elementare",
-        "presenza": "39,13%",
+        "presenza": "37,50%",
         "vdbInv": "Assente",
         "obiettivo": "Essere più presente - fare amicizia - essere più protagonista",
         "prede": "Conoscere meglio i sestiglieri- Akela",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "disegnatore",
-            "prova": "Fare una ricerca su un pittore famoso / Realizzare un disegno con una tecnica a scelta - Kaa"
+            "nome": "Disegnatore",
+            "prove": [
+              { "testo": "Fare una ricerca su un pittore famoso", "completata": false },
+              { "testo": "Realizzare un disegno con una tecnica a scelta", "completata": false }
+            ],
+            "assegnataDa": "Kaa"
           }
         ],
         "tagliaMaglia": "",
@@ -292,19 +348,27 @@ const LUPETTI_DATA = {
         "cog": "FROIO",
         "nom": "ANDREA",
         "classe": "3 elementare",
-        "presenza": "73,91%",
+        "presenza": "75%",
         "vdbInv": "Mi è piaciuto colosseo, la caccia a Bagheera. Come impegno a breve vorrei fare la promessa.",
         "obiettivo": "Scoprire come può applicare legge, promessa e motto in tana e fuori",
         "prede": "Imparare ad aprire la porta di casa/ Preghiera a San Francesco - Kaa",
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "attore",
-            "prova": "Conoscere le basi delle tecniche espressive principali (recitazione, mimo, canto, ombre cinesi,ecc)/ Costruire una piccola scenetta da presentare al Branco - Bagheera"
+            "nome": "Attore",
+            "prove": [
+              { "testo": "Conoscere le basi delle tecniche espressive principali (recitazione, mimo, canto, ombre cinesi,ecc)", "completata": false },
+              { "testo": "Costruire una piccola scenetta da presentare al Branco", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "fotografo",
-            "prova": "Imparare ad usare la macchina fotografica e a conoscere le varie componenti (cartellone)/ Scattare una serie di foto e presentarle al branco attraverso una piccola didascalia. - Bagheera"
+            "nome": "Fotografo",
+            "prove": [
+              { "testo": "Imparare ad usare la macchina fotografica e a conoscere le varie componenti (cartellone)", "completata": true, "data":"2026-06-01" },
+              { "testo": "Scattare una serie di foto e presentarle al branco attraverso una piccola didascalia.", "completata": true, "data":"2026-06-01" }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -317,15 +381,20 @@ const LUPETTI_DATA = {
         "cog": "GALLO",
         "nom": "ALESSANDRO",
         "classe": "3 elementare",
-        "presenza": "65,22%",
+        "presenza": "62,50%",
         "vdbInv": "Mi è piaciuto molto perché ho fatto amicizia, mi sono piaciuti il colosseo e la tombola. Come impegno a breve vorrei fare la promessa.",
         "obiettivo": "Continuare ad aprirsi e a divertirsi - fare amicizia di più",
         "prede": "Venire alle riunioni più volentieri / Imparare la preghiera a san francesco - Io",
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "atleta",
-            "prova": "Dimostrare di saper fare una corsa/ Conoscere i tipi di corsa che esistono/ Saper compiere semplici attività atletiche (corsa, salto alla corda, ecc.) - Bagheera"
+            "nome": "Atleta",
+            "prove": [
+              { "testo": "Dimostrare di saper fare una corsa", "completata": false },
+              { "testo": "Conoscere i tipi di corsa che esistono", "completata": false },
+              { "testo": "Saper compiere semplici attività atletiche (corsa, salto alla corda, ecc.)", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -338,15 +407,21 @@ const LUPETTI_DATA = {
         "cog": "GALLO",
         "nom": "FRANCESCA",
         "classe": "5 elementare",
-        "presenza": "82,61%",
+        "presenza": "83,33%",
         "vdbInv": "Mi è piaciuto il Colosseo, l'avvistamento, la caccia a Bagheera e la tombola. Ho fatto amicizia con Mario che è molto divertente. Come impegno a breve vorrei acquisire le specialità. Il ricordo della promessa mi rende felice e vorrei insegnarla anche ad Alessandro.",
         "obiettivo": "Prendersi cura dei piccoli del branco e della sestiglia",
         "prede": "Tenere unita la sestiglia e coinvolgere tutti durante le attività / Realizza qualcosa di manuale per la sestiglia - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "infermiera",
-            "prova": "Imparare i numeri da chiamare in caso di emergenza (118) / Cosa dire in una chiamata di soccorso/ Preparare per il Branco/Cerchio un libretto dell'occorrente in casi di incidenti (ustioni, ferite, tagli, vesciche)/Prepare un gioco simulando i vari casi di emergenza e affrontandoli - Bagheera"
+            "nome": "Infermiera",
+            "prove": [
+              { "testo": "Imparare i numeri da chiamare in caso di emergenza (118)", "completata": true, "data":"2026-06-01" },
+              { "testo": "Cosa dire in una chiamata di soccorso", "completata": true, "data":"2026-06-01"},
+              { "testo": "Preparare per il Branco/Cerchio un libretto dell'occorrente in casi di incidenti (ustioni, ferite, tagli, vesciche)", "completata": true, "data":"2026-06-01" },
+              { "testo": "Prepare un gioco simulando i vari casi di emergenza e affrontandoli", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -359,15 +434,20 @@ const LUPETTI_DATA = {
         "cog": "ISABELLA",
         "nom": "ANGELA PIA",
         "classe": "5 elementare",
-        "presenza": "60,87%",
+        "presenza": "62,50%",
         "vdbInv": "Mi sono piaciute le attività proposte (Alce Rossa, Colosseo). Come impegno a breve vorrei conquistare altre specialità.",
         "obiettivo": "Prendersi cura dei piccoli del branco e della sestiglia",
         "prede": "Realizzare qualcosa di manuale per la sestiglia - Kaa",
         "momento": "II momento",
         "specialita": [
           {
-            "nome": "infermiera",
-            "prova": "Cosa bisogna fare in caso di un taglio / Cosa deve contenere una cassetta medica/ Fare un cartellone con le parti del corpo - Kaa"
+            "nome": "Infermiera",
+            "prove": [
+              { "testo": "Cosa bisogna fare in caso di un taglio", "completata": false },
+              { "testo": "Cosa deve contenere una cassetta medica", "completata": false },
+              { "testo": "Fare un cartellone con le parti del corpo", "completata": false }
+            ],
+            "assegnataDa": "Kaa"
           }
         ],
         "tagliaMaglia": "",
@@ -380,15 +460,20 @@ const LUPETTI_DATA = {
         "cog": "ISGRO'",
         "nom": "MARIO",
         "classe": "4 elementare",
-        "presenza": "91,30%",
+        "presenza": "91,67%",
         "vdbInv": "Mi sono piaciuti i giochi, dormire insieme e stare insieme con gli altri. Come impegno a breve vorrei fare la promessa.",
         "obiettivo": "Conoscere meglio gli altri",
         "prede": "Imparare la preghiera a San Francesco/ Scoprire caratteristiche, interessi, hobby dei componenti della sestiglia - Kaa",
         "momento": "II momento",
         "specialita": [
           {
-            "nome": "astronomo",
-            "prova": "Conoscere i nomi dei pianeti del sistema solare e delle principali stelle della galassia/ Conoscere quali sono le costellazioni che si vedono in cielo nelle diverse stagioni e quali sono quelle dello Zodiaco/ Conoscere il calendario e le sue particolarità (numero di giorni, settimane, anni bisestili, calcolo della data della Pasqua e delle altre feste mobili, solstizi, equinozi, ecc.) - Bagheera"
+            "nome": "Astronomo",
+            "prove": [
+              { "testo": "Conoscere i nomi dei pianeti del sistema solare e delle principali stelle della galassia", "completata": false },
+              { "testo": "Conoscere quali sono le costellazioni che si vedono in cielo nelle diverse stagioni e quali sono quelle dello Zodiaco", "completata": false },
+              { "testo": "Conoscere il calendario e le sue particolarità (numero di giorni, settimane, anni bisestili, calcolo della data della Pasqua e delle altre feste mobili, solstizi, equinozi, ecc.)", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -401,19 +486,27 @@ const LUPETTI_DATA = {
         "cog": "LONGO",
         "nom": "BEATRICE",
         "classe": "5 elementare",
-        "presenza": "69,57%",
+        "presenza": "70,83%",
         "vdbInv": "Sono arrivata il secondo giorno. Mi è piaciuta la siesta, mercatini e skin care. Come impegno a breve vorrei acquisire più specialità (mani abili).",
         "obiettivo": "Adattarsi di più - farsi meno paranoie",
         "prede": "Aiutare gli altri durante le attività/ Fare qualcosa per la sestiglia - Io",
         "momento": "II momento",
         "specialita": [
           {
-            "nome": "infermiera",
-            "prova": "Imparare i numeri da chiamare in caso di emergenza (118) / Cosa dire in una chiamata di soccorso/ Cosa deve essere presente in una cassetta medica"
+            "nome": "Infermiera",
+            "prove": [
+              { "testo": "Imparare i numeri da chiamare in caso di emergenza (118)", "completata": false },
+              { "testo": "Cosa dire in una chiamata di soccorso", "completata": false },
+              { "testo": "Cosa deve essere presente in una cassetta medica", "completata": false }
+            ]
           },
           {
-            "nome": "giornalista",
-            "prova": "Realizzare un giornalino raccogliendo notizie ed interviste con le foto / Conoscere la struttura di un articolo - Bagheera"
+            "nome": "Giornalista",
+            "prove": [
+              { "testo": "Realizzare un giornalino raccogliendo notizie ed interviste con le foto", "completata": false },
+              { "testo": "Conoscere la struttura di un articolo", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -426,15 +519,19 @@ const LUPETTI_DATA = {
         "cog": "LUCCHINO",
         "nom": "RICCARDO",
         "classe": "3 elementare",
-        "presenza": "60,87%",
+        "presenza": "62,50%",
         "vdbInv": "Mi è piaciuta la caccia a Bagheera, l'Alce rossa, la sera giocare con i compagni. È un bimbo giocoso che gli piace divertirsi ma perde il controllo e supera l'asticella (detto da Akela). Migliorare questo aspetto oltre a prendere la promessa.",
         "obiettivo": "Essere meno infantile e fare amicizia di più con gli altri ed essere presente",
         "prede": "Comportarsi meglio durante le riunioni / Conoscere meglio i sestiglieri/ Preghiera San Francesco - Io",
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "disegnatore",
-            "prova": "Conoscere le varie tecniche di disegno e sapere quale materiale usare per realizzare ogni specifica tecnica/ Fare un disegno con una tecnica a scelta e spiegare la tecnica utilizzata. - Bagheera"
+            "nome": "Disegnatore",
+            "prove": [
+              { "testo": "Conoscere le varie tecniche di disegno e sapere quale materiale usare per realizzare ogni specifica tecnica", "completata": false },
+              { "testo": "Fare un disegno con una tecnica a scelta e spiegare la tecnica utilizzata.", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -447,15 +544,19 @@ const LUPETTI_DATA = {
         "cog": "MALVASO",
         "nom": "VITO MARIA",
         "classe": "5 elementare",
-        "presenza": "82,61%",
+        "presenza": "83,33%",
         "vdbInv": "Mi è piaciuta la skin care, la tombola (anche se ingiusta), l'avvistamento, fare amicizia con tutti, Cecilia ha la lingua lunga (20 cm + le parole).",
         "obiettivo": "Essere più gentile - dare più spazio agli altri",
         "prede": "Accettare le sconfitte/ Barattolo della gentilezza (ogni volta che non esprimi una cosa positiva o non fai una negativa metti un biglietto nel barattolo e scrivi cosa hai fatto) / Realizzare qualcosa di manuale per la sestiglia - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "amico degli animali",
-            "prova": "Costruire un terrario per un ragno / Caratteristiche e curiosità sugli Aracnidi - Bagheera"
+            "nome": "Amico degli animali",
+            "prove": [
+              { "testo": "Costruire un terrario per un ragno", "completata": false },
+              { "testo": "Caratteristiche e curiosità sugli Aracnidi", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -475,19 +576,28 @@ const LUPETTI_DATA = {
         "cog": "PELLEGRINO",
         "nom": "FRANCESCA SOLE",
         "classe": "5 elementare",
-        "presenza": "65,22%",
+        "presenza": "66,67%",
         "vdbInv": "Assente",
         "obiettivo": "Fare amicizia con gli altri - essere più presente",
         "prede": "Realizzare un dolce ed un salato con Delia e spiegare la ricetta / Ricordino per i VL/ Prendersi cura dei più piccoli - Kaa",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "giocatore di squadra",
-            "prova": "Insieme a Mattia realizzare più giochi di squadra e presentarli al branco (un torneo)/ Fare un piccolo quaderno dei giochi di squadra a disposizione del Branco/Cerchio. - Bagheera"
+            "nome": "Giocatore di squadra",
+            "prove": [
+              { "testo": "Insieme a Mattia realizzare più giochi di squadra e presentarli al branco (un torneo)", "completata": false },
+              { "testo": "Fare un piccolo quaderno dei giochi di squadra a disposizione del Branco/Cerchio.", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "infermiere",
-            "prova": "Imparare i numeri da chiamare in caso di emergenza (118)/ Sapere cosa deve contenere la cassetta di primo soccorso/ Sapere cosa dire in caso di emergenza - Bagheera"
+            "nome": "Infermiere",
+            "prove": [
+              { "testo": "Imparare i numeri da chiamare in caso di emergenza (118)", "completata": true, "data":"2026-06-01" },
+              { "testo": "Sapere cosa deve contenere la cassetta di primo soccorso", "completata": false },
+              { "testo": "Sapere cosa dire in caso di emergenza", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -500,19 +610,27 @@ const LUPETTI_DATA = {
         "cog": "RASO",
         "nom": "CHIARA",
         "classe": "5 elementare",
-        "presenza": "65,22%",
+        "presenza": "62,50%",
         "vdbInv": "Mi è piaciuto vedere Vito con la maschera del panda e Mattia. Come attività mi sono piaciute il gioco scalpo, quello con la palla e l'Alce rossa.",
         "obiettivo": "Deve scoprire come prendere cura degli altri del branco e della sestiglia",
         "prede": "Aiutare i più piccoli durante le attività/ Preparare la merenda per 2 riunioni - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "musicista",
-            "prova": "Spiegare le note e come si suona la chitarra/ Suonare una canzone al branco - Bagheera"
+            "nome": "Musicista",
+            "prove": [
+              { "testo": "Spiegare le note e come si suona la chitarra", "completata": false },
+              { "testo": "Suonare una canzone al branco", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "sarta",
-            "prova": "Imparare a cucire un bottone e mostrarlo al branco/ Dire al branco quali sono i materiali per realizzare i tessuti e le tecniche che possono essere utilizzare per lavorarli (fare una ricerca per entrambi)  - Bagheera"
+            "nome": "Sarta",
+            "prove": [
+              { "testo": "Imparare a cucire un bottone e mostrarlo al branco", "completata": false },
+              { "testo": "Dire al branco quali sono i materiali per realizzare i tessuti e le tecniche che possono essere utilizzare per lavorarli (fare una ricerca per entrambi)", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -525,17 +643,12 @@ const LUPETTI_DATA = {
         "cog": "STELLA",
         "nom": "MARIO LUCA",
         "classe": "5 elementare",
-        "presenza": "69,57%",
+        "presenza": "70,83%",
         "vdbInv": "Mi è piaciuta la tombola. Come impegno vorrei impegnarmi per passare nel reparto.",
         "obiettivo": "Aprirsi di più con gli altri",
         "prede": "Cucinare qualcosa / Spiegare un gioco al branco - Mor/Akela",
         "momento": "III momento",
-        "specialita": [
-          {
-            "nome": "",
-            "prova": ""
-          }
-        ],
+        "specialita": [],
         "tagliaMaglia": "",
         "vdbEst": "",
         "assisi": "Si",
@@ -546,15 +659,20 @@ const LUPETTI_DATA = {
         "cog": "TALARICO",
         "nom": "DELIA",
         "classe": "5 elementare",
-        "presenza": "52,17%",
+        "presenza": "50%",
         "vdbInv": "Assente",
         "obiettivo": "Fare amicizia con gli altri - essere più presente",
         "prede": "Realizzare un dolce e un salato con Fra e spiegare la ricetta/ Spiegare un gioco al branco- Kaa",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "atleta",
-            "prova": "Conoscere i vari tipi di corsa che esistono / Dimostrare di saper fare una corsa, di saper saltare la corda / Preparare gli esercizi per la ginnastica mattutina alle vdb estive o da presentare a riunione - Bagheera"
+            "nome": "Atleta",
+            "prove": [
+              { "testo": "Conoscere i vari tipi di corsa che esistono", "completata": false },
+              { "testo": "Dimostrare di saper fare una corsa, di saper saltare la corda", "completata": false },
+              { "testo": "Preparare gli esercizi per la ginnastica mattutina alle vdb estive o da presentare a riunione", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -567,19 +685,28 @@ const LUPETTI_DATA = {
         "cog": "TORCASIO",
         "nom": "VANESSA",
         "classe": "5 elementare",
-        "presenza": "86,96%",
+        "presenza": "87,50%",
         "vdbInv": "Molto bello, mi sono piaciute tutte le attività e tutto. Il primo impegno che voglio prendermi è fare la promessa.",
         "obiettivo": "Deve scoprire come prendere cura degli altri del branco e della sestiglia",
         "prede": "Fare BA per qualcuno/ Conoscere meglio i componenti della sestiglia (hobby ecc) - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "amico degli animali",
-            "prova": "Spiegare le differenze tra mammiferi, rettili, anfibi, uccelli e pesci; soffermandosi in particolare sul proprio animale domestico, indicando caratteristiche ed abitudini/ Sapere quali sono gli animali protetti dalla legge e perché / Realizzare un cartellone rappresentando gli animali del luogo in cui si vive con le relative tracce. - Bagheera"
+            "nome": "Amico degli animali",
+            "prove": [
+              { "testo": "Spiegare le differenze tra mammiferi, rettili, anfibi, uccelli e pesci; soffermandosi in particolare sul proprio animale domestico, indicando caratteristiche ed abitudini", "completata": false },
+              { "testo": "Sapere quali sono gli animali protetti dalla legge e perché", "completata": false },
+              { "testo": "Realizzare un cartellone rappresentando gli animali del luogo in cui si vive con le relative tracce.", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "mani abili",
-            "prova": "Imparare i nodi principali e spiegarli al branco / Realizzare un oggetto con materiali riciclati - Kaa"
+            "nome": "Mani abili",
+            "prove": [
+              { "testo": "Imparare i nodi principali e spiegarli al branco", "completata": true, "data":"2026-06-01" },
+              { "testo": "Realizzare un oggetto con materiali riciclati", "completata": false }
+            ],
+            "assegnataDa": "Kaa"
           }
         ],
         "tagliaMaglia": "",
@@ -599,19 +726,29 @@ const LUPETTI_DATA = {
         "cog": "TROPEA",
         "nom": "SAVERIO",
         "classe": "4 elementare",
-        "presenza": "47,83%",
+        "presenza": "45,83%",
         "vdbInv": "Assente",
         "obiettivo": "Essere più presente e meno timoroso",
         "prede": "Cantare una canzone davanti al branco/ Essere più presente alle riunioni - Io",
         "momento": "II momento",
         "specialita": [
           {
-            "nome": "cuoco",
-            "prova": "Conoscere le regole di una buona alimentazione e conoscere i problemi causati da una cattiva alimentazione/ Conoscere le principali norme igieniche che devono essere rispettate quando si cucina/ Cucinare a casa 1/2 piatti semplici diversi e raccogliere le ricette - Bagheera"
+            "nome": "Cuoco",
+            "prove": [
+              { "testo": "Conoscere le regole di una buona alimentazione e conoscere i problemi causati da una cattiva alimentazione", "completata": false },
+              { "testo": "Conoscere le principali norme igieniche che devono essere rispettate quando si cucina", "completata": false },
+              { "testo": "Cucinare a casa 1/2 piatti semplici diversi e raccogliere le ricette", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "infermiere",
-            "prova": "Imparare i numeri da chiamare in caso di emergenza (118)/ Sapere cosa deve contenere la cassetta di primo soccorso/ Fare un cartellone con illustrazioni di tecniche di bendaggio e medicazione - Bagheera"
+            "nome": "Infermiere",
+            "prove": [
+              { "testo": "Imparare i numeri da chiamare in caso di emergenza (118)", "completata": false },
+              { "testo": "Sapere cosa deve contenere la cassetta di primo soccorso", "completata": false },
+              { "testo": "Fare un cartellone con illustrazioni di tecniche di bendaggio e medicazione", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -624,19 +761,27 @@ const LUPETTI_DATA = {
         "cog": "VIOLA",
         "nom": "GIULIA",
         "classe": "5 elementare",
-        "presenza": "86,96%",
+        "presenza": "83,33%",
         "vdbInv": "Assente",
         "obiettivo": "Prendersi cura degli altri del branco e della sestiglia",
         "prede": "Scegliere una persona a riunione e fare una BA/ Realizzare qualcosa di manuale per la sestiglia - Io",
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "disegnatore",
-            "prova": "Conoscere le varie tecniche di disegno e sapere quale materiale usare per realizzare ogni specifica tecnica/ Realizzare una mostra di disegni con pezzi realizzati con tecniche diverse (acquarello, colori a cera, tempera, matita, carboncino ecc). - Bagheera"
+            "nome": "Disegnatore",
+            "prove": [
+              { "testo": "Conoscere le varie tecniche di disegno e sapere quale materiale usare per realizzare ogni specifica tecnica", "completata": false },
+              { "testo": "Realizzare una mostra di disegni con pezzi realizzati con tecniche diverse (acquarello, colori a cera, tempera, matita, carboncino ecc).", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           },
           {
-            "nome": "fotografo",
-            "prova": "Imparare ad usarla la macchina fotografica e conoscere le varie componenti/ Scattare una serie di foto e presentarle al branco attraverso un album fai da te - Bagheera"
+            "nome": "Fotografo",
+            "prove": [
+              { "testo": "Imparare ad usarla la macchina fotografica e conoscere le varie componenti", "completata": false },
+              { "testo": "Scattare una serie di foto e presentarle al branco attraverso un album fai da te", "completata": false }
+            ],
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -657,7 +802,10 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Disegnatore",
-            "prova": "Disegnare con una tecnica a piacere una foto del campo estivo/ Fare un disegno con una tecnica a scelta"
+            "prove": [
+              { "testo": "Disegnare con una tecnica a piacere una foto del campo estivo", "completata": true, "data":"2025/10" },
+              { "testo": "Fare un disegno con una tecnica a scelta", "completata": true }
+            ]
           }
         ],
         "tagliaMaglia": "L",
@@ -673,7 +821,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Mani Abili",
-            "prova": "Costruzione in legno di un portapenne e di un aereo."
+            "prove": [
+              { "testo": "Costruzione in legno di un portapenne e di un aereo.", "completata": true, "data":"2025/07" }
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -744,7 +894,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Cuoco",
-            "prova": "Fare una torta per le vdb e spiegare la ricetta"
+            "prove": [
+              { "testo": "Fare una torta per le vdb e spiegare la ricetta", "completata": true, "data":"2025/07" }
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -760,11 +912,15 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Cuoco",
-            "prova": "Per Ottobre: Cartellone tagliatelle e spiegare come si fanno."
+            "prove": [
+              { "testo": "Per Ottobre: Cartellone tagliatelle e spiegare come si fanno.", "completata": true, "data":"2025/10" }
+            ]
           },
           {
             "nome": "Scrittore",
-            "prova": "Ricerca su Francesco."
+            "prove": [
+              { "testo": "Ricerca su Francesco.", "completata": true, "data":"2025/10"}
+            ]
           }
         ],
         "tagliaMaglia": "",
@@ -780,7 +936,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Attore",
-            "prova": "Rappresentare una scenetta alle vdb estive."
+            "prove": [
+              { "testo": "Rappresentare una scenetta alle vdb estive.", "completata": true, "data":"2025/07" }
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -796,7 +954,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Maestro dei Giochi",
-            "prova": "Costruzione dama in cartone ed imparare come si gioca"
+            "prove": [
+              { "testo": "Costruzione dama in cartone ed imparare come si gioca", "completata": true, "data":"2025/07" }
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -812,7 +972,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Disegnatore",
-            "prova": "Per Ottobre: fare un disegno della sagrada familia con matita sanguigna, disegno del padre ed una tela (tramonto)"
+            "prove": [
+              { "testo": "Per Ottobre: fare un disegno della sagrada familia con matita sanguigna, disegno del padre ed una tela (tramonto)", "completata": true, "dataCompletamento":"2025/10" }
+            ]
           }
         ],
         "tagliaMaglia": "",
@@ -828,7 +990,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Giocattolaio",
-            "prova": "Costruzione di un distributore di cartone ed un ferma fazzolettone di erba"
+            "prove": [
+              { "testo": "Costruzione di un distributore di cartone ed un ferma fazzolettone di erba", "completata": true, "data":"2025/07" }
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -845,7 +1009,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Cuoco",
-            "prova": "Cucinare un dolce e spiegare la ricetta al branco"
+            "prove": [
+              { "testo": "Cucinare un dolce e spiegare la ricetta al branco", "completata": true, "data":"2025/07"}
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -872,7 +1038,9 @@ const LUPETTI_DATA = {
         "specialita": [
           {
             "nome": "Cuoco",
-            "prova": "Fare una torta per le vdb e spiegare la ricetta"
+            "prove": [
+              { "testo": "Fare una torta per le vdb e spiegare la ricetta", "completata": true, "data":"2025/07" }
+            ]
           }
         ],
         "tagliaMaglia": "9/11",
@@ -2431,6 +2599,7 @@ const LUPETTI_DATA = {
           "ComuneResidenza": "LAMEZIA TERME",
           "ProvinciaResidenza": "CZ",
           "Cap": "88046",
+          "Professione": "INSEGNANTE",
           "LivelloFoCa": "CAPO",
           "AnnoCoCa": "1995",
           "StatusSocio": "RINNOVO ADESIONE",
@@ -3754,24 +3923,85 @@ const LUPETTI_DATA = {
 
     function buildSpecHtmlLC(specArr) {
       if (!specArr || !specArr.length) return '<div class="prog-value-block empty">Nessuna specialità.</div>';
+
+      // Formatta data → GG/MM/AAAA (o MM/AAAA se solo anno/mese)
+      // Accetta: "AAAA-MM-GG", "AAAA/MM/GG", "AAAA-MM", "AAAA/MM",
+      //         "GG/MM/AAAA", "MM/AAAA", e stringhe con prefisso (es. "campo 2025/07")
+      const fmtData = (d) => {
+        if (!d) return '';
+        const s = String(d).trim();
+        if (!s) return '';
+        // Cerca pattern AAAA-MM-GG o AAAA/MM/GG (con possibile prefisso testuale)
+        let m = s.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})/);
+        if (m) return `${m[3].padStart(2,'0')}/${m[2].padStart(2,'0')}/${m[1]}`;
+        // Cerca pattern GG-MM-AAAA o GG/MM/AAAA
+        m = s.match(/(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})/);
+        if (m) return `${m[1].padStart(2,'0')}/${m[2].padStart(2,'0')}/${m[3]}`;
+        // Cerca pattern AAAA-MM o AAAA/MM (con possibile prefisso testuale)
+        m = s.match(/(\d{4})[-\/](\d{1,2})/);
+        if (m) return `${m[2].padStart(2,'0')}/${m[1]}`;
+        // Cerca pattern MM-AAAA o MM/AAAA
+        m = s.match(/(\d{1,2})[-\/](\d{4})/);
+        if (m) return `${m[1].padStart(2,'0')}/${m[2]}`;
+        return s;
+      };
+
       const rows = specArr.map(sp => {
-        const prova = (sp.prova || '').trim();
         let provaHtml = '<span class="empty">—</span>';
-        if (prova) {
-          const { parts, acc } = splitProva(prova);
-          const accHtml = acc ? `<div style="margin-top:6px;color:#7a8298;font-size:12px"><strong>Assegnato da:</strong> ${escapeHtml(acc)}</div>` : '';
-          if (parts.length > 1) {
-            provaHtml = `<ul style="margin:0;padding-left:16px">${parts.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>${accHtml}`;
-          } else if (parts.length === 1) {
-            provaHtml = `${escapeHtml(parts[0])}${accHtml}`;
-          } else {
-            provaHtml = escapeHtml(prova);
+        let statoHtml = '';
+
+        // === NUOVO FORMATO: array "prove" con completamento per ogni punto ===
+        if (Array.isArray(sp.prove) && sp.prove.length) {
+          const items = sp.prove.map(pr => {
+            const testo = (pr.testo || '').trim();
+            if (!testo) return '';
+            const ok = pr.completata === true;
+            const d = fmtData(pr.data || pr.dataCompletamento);
+            const iconHtml = ok ? '<span class="prova-check done">✓</span>' : '<span class="prova-check todo">○</span>';
+            const dateHtml = ok && d ? `<span class="prova-data">${escapeHtml(d)}</span>` : '';
+            return `<li class="prova-item ${ok ? 'done' : ''}">${iconHtml}<span class="prova-testo">${escapeHtml(testo)}</span>${dateHtml}</li>`;
+          }).filter(Boolean).join('');
+          provaHtml = `<ul class="prove-list">${items}</ul>`;
+
+          const totale = sp.prove.length;
+          const fatte = sp.prove.filter(p => p.completata === true).length;
+          if (fatte > 0) {
+            const cls = fatte === totale ? 'spec-stato-done' : 'spec-stato-partial';
+            const lbl = fatte === totale ? '✓ Completata' : `${fatte}/${totale} completate`;
+            statoHtml = `<div class="spec-stato ${cls}">${lbl}</div>`;
+          }
+
+          const accLabel = (sp.assegnataDa || '').trim();
+          if (accLabel) {
+            provaHtml += `<div style="margin-top:6px;color:#7a8298;font-size:12px"><strong>Assegnato da:</strong> ${escapeHtml(accLabel)}</div>`;
           }
         }
+        // === VECCHIO FORMATO: stringa "prova" (compatibilità) ===
+        else {
+          const prova = (sp.prova || '').trim();
+          if (prova) {
+            const { parts, acc } = splitProva(prova);
+            const accHtml = acc ? `<div style="margin-top:6px;color:#7a8298;font-size:12px"><strong>Assegnato da:</strong> ${escapeHtml(acc)}</div>` : '';
+            if (parts.length > 1) {
+              provaHtml = `<ul style="margin:0;padding-left:16px">${parts.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>${accHtml}`;
+            } else if (parts.length === 1) {
+              provaHtml = `${escapeHtml(parts[0])}${accHtml}`;
+            } else {
+              provaHtml = escapeHtml(prova);
+            }
+          }
+          if (sp.completata === true) {
+            const d = fmtData(sp.dataCompletamento);
+            statoHtml = `<div class="spec-stato spec-stato-done">✓ Completata${d ? ' il ' + escapeHtml(d) : ''}</div>`;
+          } else if (sp.completata === false) {
+            statoHtml = `<div class="spec-stato spec-stato-todo">In corso</div>`;
+          }
+        }
+
         return `
       <div class="spec-block-row">
         <span class="spec-label">${escapeHtml(sp.nome || '')}</span>
-        <div class="spec-value ${prova ? '' : 'empty'}">${provaHtml}</div>
+        <div class="spec-value">${provaHtml}${statoHtml}</div>
       </div>`;
       }).join('');
       return `<div class="spec-block">${rows}</div>`;
@@ -3797,7 +4027,7 @@ const LUPETTI_DATA = {
         const pNow = parseFloat(p.replace('%', '').replace(',', '.'));
         const pPrev = parseFloat(prev.replace('%', '').replace(',', '.'));
         if (!isNaN(pNow) && !isNaN(pPrev)) {
-          const diff = pNow - pPrev;
+          const diff = pPrev !== 0 ? ((pNow - pPrev) / pPrev) * 100 : 0;
           const rounded = Math.round(diff * 10) / 10;
           const sign = rounded > 0 ? '+' : '';
           const color = rounded > 0 ? '#27ae60' : rounded < 0 ? '#c0392b' : '#7a8298';
