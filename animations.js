@@ -76,9 +76,11 @@ const LUPETTI_DATA = {
         "momento": "III momento",
         "specialita": [
           {
-            "nome": "Cuoco",
+            "nome": "Artigiano",
             "prove": [
-              { "testo": "?", "completata": false },
+              { "testo": "In un negozio di brico o ferramenta individua 5 materiali diversi e spiega le caratteristiche principali (utilizzo, costo, come si lavora, quanto è resistente nel tempo, se è riciclabile o meno)", "completata": false },
+              { "testo": "Progetta un oggetto che vuoi realizzare attraverso un disegno inserendo misure, materiali e lista della spesa (può essere anche un gioco o qualcosa di utile per il campo estivo). Fai una stima delle quantità dei materiali di cui hai bisogno e del costo prima di iniziare a costruire, e poi confronta con il reale", "completata": false },
+              { "testo": "Realizza una cassetta della posta (per la posta di Chil) scegliendo il materiale e la forma che preferisci. Serve per contenere dei messaggi scritti dal Branco", "completata": false },
             ],
             "assegnataDa": "Bagheera"
           }
@@ -149,13 +151,13 @@ const LUPETTI_DATA = {
         "momento": "I momento",
         "specialita": [
           {
-            "nome": "Canterina",
+            "nome": "Cuoco",
             "prove": [
-              { "testo": "Imparare la sua canzone preferita", "completata": false },
-              { "testo": "Imparare le note musicali", "completata": false },
-              { "testo": "Proporre un canto scout al branco", "completata": false }
+              { "testo": "Conoscere le pietanze base dell'alimentazione (pane, pasta, carne, legumi, frutta, ecc.) ed il significato dei termini: calorie, proteine, glucidi, lipidi, vitamine, sali minerali", "completata": false },
+              { "testo": "Conoscere le principali norme igieniche che devono essere rispettate quando si cucina", "completata": false },
+              { "testo": "Cucinare a casa 1/2 piatti semplici diversi e raccoglierne le ricette", "completata": false }
             ],
-            "assegnataDa": "Kaa"
+            "assegnataDa": "Bagheera"
           }
         ],
         "tagliaMaglia": "",
@@ -178,7 +180,8 @@ const LUPETTI_DATA = {
             "nome": "Fografo",
             "prove": [
               { "testo": "Imparare ad usare la macchina fotografica e a conoscere le varie componenti", "completata": true, "data":"2026-06-01" },
-              { "testo": "Scattare una serie di foto e presentarle al branco.", "completata": true, "data":"2026-06-01" }
+              { "testo": "Scattare una serie di foto e presentarle al branco", "completata": true, "data":"2026-06-01" },
+              { "testo": "Portare la macchian fotografica alle Vdb estive", "completata": false }
             ],
             "assegnataDa": "?"
           }
@@ -202,14 +205,16 @@ const LUPETTI_DATA = {
           {
             "nome": "Atleta",
             "prove": [
-              { "testo": "Preparare e proporre un gioco di movimento tramite un percorso (staffetta, palla,ecc.)", "completata": false }
+              { "testo": "Preparare e proporre un gioco di movimento tramite un percorso (staffetta, palla,ecc.)", "completata": false },
+              { "testo": "Essere in grado di compiere, con buoni risultati, semplici attività atletiche (corsa, salto, salto alla corda, ecc.)","completata":false },
+              { "testo": "Preparare degli esercizi di riscaldamento muscolare per il campo estivo","completata":false }
             ],
             "assegnataDa": "Bagheera"
           },
           {
             "nome": "Canterina",
             "prove": [
-              { "testo": "Conoscere le note musicali", "completata": false },
+              { "testo": "Conoscere le note musicali. Riconoscere i simboli musicali fondamentali dello spartito (note, durata, ritmo).", "completata": false },
               { "testo": "Insegnare al Branco/Cerchio almeno 2 canti nuovi", "completata": false }
             ],
             "assegnataDa": "Bagheera"
@@ -302,7 +307,7 @@ const LUPETTI_DATA = {
             "nome": "Giocatore di squadra",
             "prove": [
               { "testo": "Insieme a Francesca realizzare più giochi di squadra e presentarli al branco (un torneo)", "completata": false },
-              { "testo": "Fare un piccolo quaderno dei giochi di squadra a disposizione del Branco/Cerchio.", "completata": false }
+              { "testo": "Fare un piccolo quaderno dei giochi di squadra insieme a Francesca Sole da mettere a disposizione del Branco/Cerchio.", "completata": false }
             ],
             "assegnataDa": "Bagheera"
           }
@@ -553,8 +558,10 @@ const LUPETTI_DATA = {
           {
             "nome": "Amico degli animali",
             "prove": [
-              { "testo": "Costruire un terrario per un ragno", "completata": false },
-              { "testo": "Caratteristiche e curiosità sugli Aracnidi", "completata": false }
+              { "testo": "Spiegare le differenze tra mammiferi, rettili, anfibi, uccelli e pesci; mostrando in particolare come ci si prende cura del proprio animale domestico (se ne si ha uno o di un animale generico), indicando, inoltre, caratteristiche, abitudini, habitat e di cosa si nutre", "completata": false },
+              { "testo": "Sapere quali sono gli animali protetti dalla legge e perché", "completata": false },
+              { "testo": "Realizzare un cartellone rappresentando gli animali del luogo in cui si vive con le relative tracce", "completata": false }
+
             ],
             "assegnataDa": "Bagheera"
           }
@@ -586,7 +593,7 @@ const LUPETTI_DATA = {
             "nome": "Giocatore di squadra",
             "prove": [
               { "testo": "Insieme a Mattia realizzare più giochi di squadra e presentarli al branco (un torneo)", "completata": false },
-              { "testo": "Fare un piccolo quaderno dei giochi di squadra a disposizione del Branco/Cerchio.", "completata": false }
+              { "testo": "Fare un piccolo quaderno dei giochi di squadra insieme a Mattia da mettere a disposizione del Branco/Cerchio.", "completata": false }
             ],
             "assegnataDa": "Bagheera"
           },
@@ -595,7 +602,7 @@ const LUPETTI_DATA = {
             "prove": [
               { "testo": "Imparare i numeri da chiamare in caso di emergenza (118)", "completata": true, "data":"2026-06-01" },
               { "testo": "Sapere cosa deve contenere la cassetta di primo soccorso", "completata": false },
-              { "testo": "Sapere cosa dire in caso di emergenza", "completata": false }
+              { "testo": "Come gestire i vari casi di emergenza (tagli, ustioni, eritemi ecc).", "completata": false }
             ],
             "assegnataDa": "Bagheera"
           }
